@@ -1,0 +1,76 @@
+def print_students(student_name):
+    marks = {'Andy':88, 'Amy':66, 'James': 90, 'Jules': 55, 'Arthur': 77}
+    for student in marks:
+        if student == student_name:
+            print(marks[student])
+            break
+        else:
+            print("cannot find this student's name")
+
+print_students('Andy')
+
+def average():
+    marks = {'Andy':88, 'Amy':66, 'James': 90, 'Jules': 55, 'Arthur': 77}
+    mean = sum(marks.values())/len(marks)
+    print(mean)
+
+average()
+
+
+
+def sq_function(num):
+    n = 0
+    while n < num:
+        print(n, n**2)
+        n += 1
+    else:
+        print('greater than', num)
+
+sq_function(8)
+
+
+
+def sumfunction(num):
+    n = 0
+    sum = 0
+    while n <= num:
+        sum = sum + n
+        n += 1
+    print(sum)
+    
+    
+    
+def sum_range(num):
+    sum = 0
+    for n in range(num):
+        sum = sum + n
+        print(sum)
+
+
+
+import statistics as stats
+c = list(range(1,100))
+def a_function(*args):
+    print("Mean value is", stats.mean(args))
+    print("Sum is", sum(args))
+    print("Standard deviation is", stats.stdev(args))
+a_function(*c)
+
+
+
+def minimum(v1, v2, v3, v4):
+    min_value = v1
+    if v2 < min_value:
+        min_value = v2
+    if v3 < min_value:
+        min_value = v3
+    if v4 < min_value:
+        min_value = v4
+    return min_value
+print(minimum(9,7,5,3))
+
+
+
+def conca_func(s1,s2,s3):
+    return s1 + s2 + s3
+conca_func('a','pp','le')
